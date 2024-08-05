@@ -3,6 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -12,9 +13,21 @@ header {
     padding: 1rem;
 }
 
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -23,12 +36,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tools-grid {
@@ -38,18 +53,27 @@ main {
 }
 
 .tool-card {
+    background-color: #fff;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tool-card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .tool-card img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .tool-card h3 {
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .tool-card .tags {
@@ -62,4 +86,11 @@ main {
     border-radius: 3px;
     font-size: 0.8em;
     margin-right: 5px;
+}
+
+#toolDetail {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
