@@ -4,7 +4,7 @@ const tools = [
         id: 1,
         name: "DTO",
         description: "一个类似 Hacker News, Lobsters 的链接分享社区",
-        logo: "https://placeholder.com/100x100",
+        logo: "https://via.placeholder.com/100x100.png?text=DTO",
         tags: ["程序员", "社区"],
         category: "new"
     },
@@ -12,7 +12,7 @@ const tools = [
         id: 2,
         name: "BestXTools 社区",
         description: "发现并分享有趣、好用、高效的工具",
-        logo: "https://placeholder.com/100x100",
+        logo: "https://via.placeholder.com/100x100.png?text=BestXTools",
         tags: ["在线工具", "分享", "社区"],
         category: "new"
     },
@@ -20,11 +20,18 @@ const tools = [
         id: 3,
         name: "Pipecraft 社区",
         description: "这里是可以自由交流关于 RSS, Atom, JSON Feed, 聚合新闻, 内容订阅等话题的地方",
-        logo: "https://placeholder.com/100x100",
+        logo: "https://via.placeholder.com/100x100.png?text=Pipecraft",
         tags: ["RSS", "Atom", "聚合新闻", "内容订阅"],
         category: "recommended"
     },
-    // 添加更多工具...
+    {
+        id: 4,
+        name: "纵横网址导航",
+        description: "收集小而美的中文独立博客、论坛、主题网站等网址导航网站。",
+        logo: "https://via.placeholder.com/100x100.png?text=纵横",
+        tags: ["网址导航", "中文博客", "独立博客"],
+        category: "programmer"
+    }
 ];
 
 // 在主页显示工具
@@ -70,7 +77,7 @@ function displayToolDetail() {
         const detailContainer = document.getElementById('toolDetail');
         detailContainer.innerHTML = `
             <h2>${tool.name}</h2>
-            <img src="${tool.logo}" alt="${tool.name} logo">
+            <img src="${tool.logo}" alt="${tool.name} logo" style="max-width: 200px;">
             <p>${tool.description}</p>
             <div class="tags">
                 ${tool.tags.map(tag => `<span>${tag}</span>`).join('')}
